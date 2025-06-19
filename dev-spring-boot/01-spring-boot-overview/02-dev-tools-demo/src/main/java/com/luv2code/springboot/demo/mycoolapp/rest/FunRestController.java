@@ -19,4 +19,10 @@ public class FunRestController {
     @Value("${team.name}")
     private String teamName;
 
+    // expose a new endpoint for "workout"
+    @GetMapping("/workout")
+    public String getDailyWorkout() {
+        return "Run a hard 5k!";
+    }
+
 }
