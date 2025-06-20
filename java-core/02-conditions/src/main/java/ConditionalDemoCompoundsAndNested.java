@@ -18,6 +18,13 @@ public class ConditionalDemoCompoundsAndNested {
 
         if (userCount >= minClassCount && userCount <= maxClassCount) {
             System.out.println("Your class count is in the recommended range");
+
+            // check if userCount is even or odd
+            if (userCount % 2 == 0) {
+                System.out.println("Your class count is even");
+            } else {
+                System.out.println("Your class count is odd");
+            }
         } else {
             System.out.println("Your class count is NOT in the recommended range");
         }
