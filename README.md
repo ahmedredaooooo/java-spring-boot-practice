@@ -5,4 +5,4 @@ A collection of Java and Spring Boot projects and exercises built during my lear
 ## 📁 Project Structure
 
 - `java-core/`: Java projects and exercises I built while learning core Java.
-- `spring-boot/`: Spring Boot projects and exercises I built while learning Spring Boot.
+- `dev-spring-boot/`: Spring Boot projects and exercises I built while learning Spring Boot.
