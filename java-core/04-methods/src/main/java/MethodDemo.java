@@ -11,9 +11,7 @@ public class MethodDemo {
     static void displayManyGreetings(int count) {
         for (int i = 1; i <= count; i++) {
 
-            System.out.println("Hello World!");
-            System.out.println("Welcome to Java!");
-            System.out.println("Please make yourself at home.");
+            displayGreetings();
 
             System.out.println();
         }
