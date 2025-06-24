@@ -5,10 +5,10 @@ public class MethodDemo {
         // call the method
         // displayGreetings();
 
-        displayManyGreetings(3);
+        displayGreetings(3);
     }
 
-    static void displayManyGreetings(int count) {
+    static void displayGreetings(int count) {
         for (int i = 1; i <= count; i++) {
 
             displayGreetings();
