@@ -4,17 +4,20 @@ public class ComputeGradeAverageDemov2 {
 
     public static void main(String[] args) {
 
-        double[] grades = getDoubles();
+        double[] grades = getUserGrades();
 
+        displayGrades(grades);
 
+        double gradeAverage = computeGradeAverage(grades);
+
+        System.out.println("Your grade average is: " + gradeAverage);
+    }
+
+    private static void displayGrades(double[] grades) {
         System.out.println("your grades are:-");
         // display the grades
         for (double grade : grades)
             System.out.println(grade);
-
-        double gradeAverage = computeGradeAverage(grades);
-        System.out.println("Your grade average is: " + gradeAverage);
-
     }
 
     private static double[] getUserGrades() {
