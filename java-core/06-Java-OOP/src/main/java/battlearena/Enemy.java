@@ -1,6 +1,6 @@
 package battlearena;
 
-public class Enemy {
+public class Enemy implements IEnemy{
 
     private int id;
     private int healthPoints;
@@ -18,26 +18,32 @@ public class Enemy {
         this.id = ++numberOfEnemies;
     }
 
+    @Override
     public int getHealthPoints() {
         return healthPoints;
     }
 
+    @Override
     public void setHealthPoints(int healthPoints) {
         this.healthPoints = healthPoints;
     }
 
+    @Override
     public int getRemainingHealthPoints() {
         return remainingHealthPoints;
     }
 
+    @Override
     public void setRemainingHealthPoints(int remainingHealthPoints) {
         this.remainingHealthPoints = remainingHealthPoints;
     }
 
+    @Override
     public int getAttackDamage() {
         return attackDamage;
     }
 
+    @Override
     public void setAttackDamage(int attackDamage) {
         this.attackDamage = attackDamage;
     }
@@ -46,22 +52,22 @@ public class Enemy {
         return numberOfEnemies;
     }
 
+    @Override
     public int getID() {
         return id;
     }
 
+    @Override
     public void specialAttack() {
         System.out.println("Enemy does not have a special attack.");
     }
 
+    @Override
     public void talk() {
         System.out.println("I am an enemy Be prepared to fight");
     }
 
-    public void walkForward() {
-        System.out.println("I am getting closer");
-    }
-
+    @Override
     public void attack() {
         System.out.println("Enemy attacks for " + attackDamage + " damage");
     }
