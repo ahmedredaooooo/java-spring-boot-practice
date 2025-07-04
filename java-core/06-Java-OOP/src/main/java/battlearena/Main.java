@@ -3,11 +3,11 @@ package battlearena;
 public class Main {
 
     public static void main(String[] args) {
-        Enemy zombie = new Enemy("Zombie", 10, 1);
-
-        Enemy ogre = new Enemy("Ogre", 20, 3);
+        Zombie zombie = new Zombie(10, 1);
+        Ogre ogre = new Ogre(20, 3);
 
         zombie.talk();
+        zombie.spreadDisease();
 
         ogre.talk();
 

@@ -2,24 +2,14 @@ package battlearena;
 
 public class Enemy {
 
-    private String enemyType;
     private int healthPoints;
     private int attackDamage;
 
     public Enemy() {}
 
-    public Enemy(String enemyType, int healthPoints, int attackDamage) {
+    public Enemy(int healthPoints, int attackDamage) {
         this.healthPoints = healthPoints;
-        this.enemyType = enemyType;
         this.attackDamage = attackDamage;
-    }
-
-    public String getEnemyType() {
-        return enemyType;
-    }
-
-    public void setEnemyType(String enemyType) {
-        this.enemyType = enemyType;
     }
 
     public int getHealthPoints() {
@@ -39,22 +29,15 @@ public class Enemy {
     }
 
     public void talk() {
-        System.out.println("I am a " + enemyType + " be prepared to fight");
+        System.out.println("I am an enemy Be prepared to fight");
     }
 
     public  void walkForward() {
-        System.out.println("I getting closer");
+        System.out.println("I am getting closer");
     }
 
     public void attack() {
-        System.out.println(enemyType + " attacks for " + attackDamage + " damage");
+        System.out.println("Enemy attacks for " + attackDamage + " damage");
     }
 
-    @Override
-    public String toString() {
-        return enemyType
-                + " has " + healthPoints
-                + " health points and can do an attack of "
-                + attackDamage;
-    }
 }
