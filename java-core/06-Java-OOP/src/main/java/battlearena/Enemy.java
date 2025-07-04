@@ -6,6 +6,8 @@ public class Enemy {
     private int healthPoints;
     private int attackDamage;
 
+    public Enemy() {}
+
     public Enemy(String enemyType, int healthPoints, int attackDamage) {
         this.healthPoints = healthPoints;
         this.enemyType = enemyType;
