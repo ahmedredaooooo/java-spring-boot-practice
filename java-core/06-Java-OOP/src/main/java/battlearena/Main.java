@@ -10,6 +10,9 @@ public class Main {
 
         System.out.println("There are " + getNumberOfEnemies() + "enemies ready to fight!");
 
+        zombie.battleStance();
+        ogre.stareDown();
+
         battle(ogre, zombie);
     }
 

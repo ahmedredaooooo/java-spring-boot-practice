@@ -23,10 +23,6 @@ public class Enemy implements IEnemy{
         return healthPoints;
     }
 
-    @Override
-    public void setHealthPoints(int healthPoints) {
-        this.healthPoints = healthPoints;
-    }
 
     @Override
     public int getRemainingHealthPoints() {

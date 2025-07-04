@@ -1,20 +1,19 @@
 package battlearena;
 
 public interface IEnemy {
-    public void talk();
-    public void attack();
+    void talk();
+    void attack();
 
-    public int getHealthPoints();
-    public void setHealthPoints(int healthPoints);
+    int getHealthPoints();
 
-    public int getRemainingHealthPoints();
-    public void setRemainingHealthPoints(int remainingHealthPoints);
+    int getRemainingHealthPoints();
+    void setRemainingHealthPoints(int remainingHealthPoints);
 
-    public int getAttackDamage();
-    public void setAttackDamage(int attackDamage);
+    int getAttackDamage();
+    void setAttackDamage(int attackDamage);
 
-    public void specialAttack();
-    public int getID();
+    void specialAttack();
+    int getID();
 
 
 }
