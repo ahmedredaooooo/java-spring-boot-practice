@@ -1,9 +1,43 @@
 package battlearena;
 
 public class Enemy {
-    String enemyType;
-    int healthPoints = 10;
-    int attackDamage = 1;
+
+    private String enemyType;
+    private int healthPoints = 10;
+    private int attackDamage = 1;
+    private boolean readyToFight;
+
+    public String getEnemyType() {
+        return enemyType;
+    }
+
+    public void setEnemyType(String enemyType) {
+        this.enemyType = enemyType;
+    }
+
+    public int getHealthPoints() {
+        return healthPoints;
+    }
+
+    public void setHealthPoints(int healthPoints) {
+        this.healthPoints = healthPoints;
+    }
+
+    public int getAttackDamage() {
+        return attackDamage;
+    }
+
+    public void setAttackDamage(int attackDamage) {
+        this.attackDamage = attackDamage;
+    }
+
+    public boolean isReadyToFight() {
+        return readyToFight;
+    }
+
+    public void setReadyToFight(boolean readyToFight) {
+        this.readyToFight = readyToFight;
+    }
 
     public void talk() {
         System.out.println("I am a " + enemyType + " be prepared to fight");
