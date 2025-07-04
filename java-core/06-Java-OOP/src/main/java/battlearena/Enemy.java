@@ -3,9 +3,14 @@ package battlearena;
 public class Enemy {
 
     private String enemyType;
-    private int healthPoints = 10;
-    private int attackDamage = 1;
-    private boolean readyToFight;
+    private int healthPoints;
+    private int attackDamage;
+
+    public Enemy(String enemyType, int healthPoints, int attackDamage) {
+        this.healthPoints = healthPoints;
+        this.enemyType = enemyType;
+        this.attackDamage = attackDamage;
+    }
 
     public String getEnemyType() {
         return enemyType;
@@ -29,14 +34,6 @@ public class Enemy {
 
     public void setAttackDamage(int attackDamage) {
         this.attackDamage = attackDamage;
-    }
-
-    public boolean isReadyToFight() {
-        return readyToFight;
-    }
-
-    public void setReadyToFight(boolean readyToFight) {
-        this.readyToFight = readyToFight;
     }
 
     public void talk() {
