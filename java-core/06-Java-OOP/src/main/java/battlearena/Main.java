@@ -11,5 +11,12 @@ public class Main {
 
         ogre.talk();
 
+        System.out.println("IDs:");
+        System.out.println(zombie.getID());
+        System.out.println(ogre.getID());
+
+        System.out.println("Number of Enemies:");
+        System.out.println(zombie.getNumberOfEnemies());
+        System.out.println(ogre.getNumberOfEnemies());
     }
 }

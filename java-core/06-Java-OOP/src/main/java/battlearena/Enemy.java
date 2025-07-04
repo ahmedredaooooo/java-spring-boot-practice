@@ -2,14 +2,17 @@ package battlearena;
 
 public class Enemy {
 
+    private int id;
     private int healthPoints;
     private int attackDamage;
+    private static int numberOfEnemies;
 
-    public Enemy() {}
+    public Enemy() {this.id = ++numberOfEnemies;}
 
     public Enemy(int healthPoints, int attackDamage) {
         this.healthPoints = healthPoints;
         this.attackDamage = attackDamage;
+        this.id = ++numberOfEnemies;
     }
 
     public int getHealthPoints() {
@@ -26,6 +29,14 @@ public class Enemy {
 
     public void setAttackDamage(int attackDamage) {
         this.attackDamage = attackDamage;
+    }
+
+    public int getNumberOfEnemies() {
+        return numberOfEnemies;
+    }
+
+    public int getID() {
+        return id;
     }
 
     public void talk() {
