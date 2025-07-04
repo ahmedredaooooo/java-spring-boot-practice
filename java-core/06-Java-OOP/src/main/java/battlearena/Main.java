@@ -6,6 +6,13 @@ public class Main {
         Enemy zombie = new Enemy();
 
         zombie.enemyType = "Zombie";
-        System.out.println(zombie);
+
+        System.out.println(zombie + "\n");
+
+        zombie.talk();
+
+        zombie.walkForward();
+
+        zombie.attack();
     }
 }
