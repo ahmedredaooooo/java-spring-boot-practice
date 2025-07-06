@@ -8,11 +8,11 @@ public class Main {
         Zombie zombie = new Zombie(10, 2);
         Ogre ogre = new Ogre(20, 3);
 
-        System.out.println("There are " + getNumberOfEnemies() + "enemies ready to fight!");
+        System.out.println("There are " + getNumberOfEnemies() + " enemies ready to fight!");
 
         zombie.battleStance();
         ogre.stareDown();
-
+        System.out.println();
         battle(ogre, zombie);
     }
 
@@ -24,7 +24,7 @@ public class Main {
     public static void battle(Enemy e1, Enemy e2) {
         e1.talk();
         e2.talk();
-
+        System.out.println("\t---Start---");
         while (e1.getRemainingHealthPoints() > 0 && e2.getRemainingHealthPoints() > 0) {
             System.out.println("\n\t-----------");
             e1.specialAttack();
@@ -39,7 +39,7 @@ public class Main {
             e1.attack();
             e2.setRemainingHealthPoints(e2.getRemainingHealthPoints() - e1.getAttackDamage());
         }
-        System.out.println("---Final---");
+        System.out.println("\t---Final---");
         if (e1.getRemainingHealthPoints() > 0) {
             System.out.println("Enemy 1 wins!");
         }
