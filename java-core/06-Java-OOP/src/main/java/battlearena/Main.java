@@ -1,24 +1,22 @@
 package battlearena;
 
-import static battlearena.Enemy.getNumberOfEnemies;
-
 public class Main {
 
     public static void main(String[] args) {
         Zombie zombie = new Zombie(10, 2);
         Ogre ogre = new Ogre(20, 3);
 
-        System.out.println("There are " + getNumberOfEnemies() + " enemies ready to fight!");
 
-        zombie.battleStance();
-        ogre.stareDown();
-        System.out.println();
-        battle(ogre, zombie);
-    }
+        // zombie.battleStance();
+        // ogre.stareDown();
 
-    public static void battle(Enemy enemy) {
-        enemy.talk();
-        enemy.attack();
+        // battle(hero, zombie);
+
+        Weapon weapon = new Weapon("Sword", 5);
+        Hero hero = new Hero(25, 1);
+        hero.setWeapon(weapon);
+        hero.equipWeapon();
+        heroBattle(hero, zombie);
     }
 
     public static void battle(Enemy e1, Enemy e2) {
@@ -45,6 +43,29 @@ public class Main {
         }
         if (e2.getRemainingHealthPoints() > 0) {
             System.out.println("Enemy 2 wins!");
+        }
+    }
+
+    public static void heroBattle(Hero hero, Enemy enemy)
+    {
+        System.out.println("\t---Start---");
+        while (hero.getRemainingHealthPoints() > 0 && enemy.getRemainingHealthPoints() > 0)
+        {
+            System.out.println("\n\t-----------");
+            enemy.specialAttack();
+            System.out.println("\nHero: " + hero.getRemainingHealthPoints() + " HP left");
+            System.out.println("\nEnemy: " + enemy.getRemainingHealthPoints() + " HP left");
+            enemy.attack();
+            hero.setRemainingHealthPoints(hero.getRemainingHealthPoints() - enemy.getAttackDamage());
+            hero.attack();
+            enemy.setRemainingHealthPoints(enemy.getRemainingHealthPoints() - hero.getAttackDamage());
+        }
+        System.out.println("\t---Final---");
+        if (enemy.getRemainingHealthPoints() > 0) {
+            System.out.println("Enemy wins!");
+        }
+        if (hero.getRemainingHealthPoints() > 0) {
+            System.out.println("Hero wins!");
         }
     }
 }
