@@ -1,4 +1,6 @@
-package battlearena;
+package battlearena.enemies.enemy;
+
+import battlearena.enemies.Enemy;
 
 public class Zombie extends Enemy implements IZombie {
     public Zombie(int healthPoints, int attackDamage) {

@@ -1,5 +1,11 @@
 package battlearena;
 
+import battlearena.enemies.Enemy;
+import battlearena.enemies.enemy.Ogre;
+import battlearena.enemies.enemy.Zombie;
+import battlearena.heros.Hero;
+import battlearena.heros.weapons.Weapon;
+
 public class Main {
 
     public static void main(String[] args) {

@@ -1,4 +1,6 @@
-package battlearena;
+package battlearena.enemies.enemy;
+
+import battlearena.enemies.Enemy;
 
 public class Ogre extends Enemy implements IOgre {
     public Ogre(int healthPoints, int attackDamage) {
